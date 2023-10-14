@@ -1,0 +1,149 @@
+import java.util.*;
+ public class baithuchanh1
+ { 
+    public static void main(String[] args) 
+    { Scanner inPut = new Scanner(System.in); 
+    int n, i, S = 1;
+     System.out.println("Nhap n: ");
+      n = inPut.nextInt();
+       for(i = 1; i <= n; i++) 
+       {
+         S = S * i;
+       } System.out.println("Ket qua la: "+ S);
+    } 
+}
+/*Chuong trinh doi do dai tu dv inch => dv cm
+input                    ( dữ kiện đầu vào )
+output; số thực ở đơn vị cm  (dữu kiện đầu ra)
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+  // đặt số ấn định (cm and inch)
+  const double CM_PER_INCH = 2.57;
+
+  double inch;            //   inch   
+  double cm;             // lưu độ dài ở đơn vị cm
+  cout <<"Nhap do dai o don vi inch:"; // lệnh xuất
+  cin >> inch;      // lệnh nhập
+
+  cm =inch * CM_PER_INCH  //  ấn định đơn vị đo kích thước từ inch-> cm 2.54
+
+  cout << "Do dai o don vi cm:" << cm << endl;  // in kết quả ra 
+
+  System("pause");
+}
+/* Chuong trinh đổi tỷ lệ % ra số cm của tivi
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+  const double CM_PER_INCH =2.54;
+  double inch;   // Biến kiểu double lưu độ dài  ở đơn vị inch
+  double cm;      // Biến kiểu doble lưu độ dài ở đơn vị cm
+  double chieuCao;   // Biến luuw chiều cao ở đơn vị cm
+  double chieuRong;   // Biến lưu chiều rộng tivi ở đơn vị cm
+ 
+
+  cout <<" Nhap kich thuc cua tivi o don vi inch:"; // lệnh xuất
+  cin >> inch;
+
+cm = inch* CM_PER_INCH
+
+chieuRong = cm * sqrt(337.0/256);
+chieuCao = 9.0/16;
+
+System("pause");
+}
+/* Kiểm tra độ dài của tivi các loại  siêu rộng , rộng, bình thường */
+#include <iostream>
+using namespace std;
+int main()
+{
+  const double CM_PER_INCH =2.54;
+  double inch;   // Biến kiểu double lưu độ dài  ở đơn vị inch
+  double cm;      // Biến kiểu doble lưu độ dài ở đơn vị cm
+  double chieuCao;   // Biến luuw chiều cao ở đơn vị cm
+  double chieuRong;   // Biến lưu chiều rộng tivi ở đơn vị cm
+  char loaiMH;   // loại màng hình S-siêu rộng , W-rộng, N-thường
+
+  cout <<" Nhap kich thuc cua tivi o don vi inch:"; // lệnh xuất
+  cin >> loaiMH;
+
+cm = inch* CM_PER_INCH
+if(loaiMH == 'S' || loaiMH =='s')
+{
+chieuRong = cm * sqrt(81.0 / 522);
+chieuCao = 21.0 / 9;
+}
+else if (loaiMH == 'W' || loaiMH == 'w')
+{
+  chieuRong = cm * sqrt(81.0 / 337);
+  chieuCao = chieuRong * 16.0 / 9;
+}
+else if (loaiMH == 'N' || loaiMH == 'n')
+{
+  chieuRong = cm * sqrt(9.0 / 25);
+  chieuCao = chieuRong  * 4.0 /3;
+}
+else
+{
+  cout << " Loai man hinh khong dung." << endl;
+  System ("pause");
+  return 0;
+}
+cout << loaiMH;
+System("pause");
+}
+
+
+/* nhập dân số tp A 
+
+*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int danSoA;
+  double tiLeTangA;
+  int danSoB;
+  double tiLeTangB;
+  int soNam // đặt ở đầu khó xem nên đạt phái dưới.
+
+  cout << "Nhap dan so tp A:";
+  cin >> danSoA;
+  cout << "Ti le tăng cua A(%):";
+  cin >> tiLeTangA;
+
+  cout << "Nhap dan so tp B:";
+  cin >> danSoB;
+  cout " Ti le tang cua B(%):";
+  cin >> tiLeTangB;
+
+  tiLeTangA = tiLeTangA / 100;     ( /* điều kiện  để tính ra %*/) 
+  tiLeTangB = tiLeTangB /100;
+
+  if(tiLeTangA < tiLeTangB && danSoA < danSoB)
+  {
+    cout <<"Dan so thanh pho A khong the vuot qua dan so cua thanh pho B."
+    System("pause")
+
+  }
+
+soNam =0 // nên gán ở đây
+  while (danSoA < danSoB)
+  {
+    danSoA = danSoA + (danSoA * tiLeTangA);
+    danSoB = danSoB + (danSoB * tiLeTangB);
+    soNam++;
+  }
+   cout << "Dan so thanh pho A:" << danSoA << endl;
+   cout << "Dan so thanh pho B:"  << danSoB << endl;
+   cout << "So nam de A vuot B:" << soNam << endl;
+
+   System("pause");
+   return kq;
+}
